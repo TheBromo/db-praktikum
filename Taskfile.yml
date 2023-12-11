@@ -6,6 +6,9 @@ vars:
   GREETING: Hello, World!
 
 tasks:
-  script:
+  sql1:
     cmds:
-      - psql -h localhost -U postgres  -a -f StrengeMettlerKueng.sql
+      - psql -h localhost -U postgres  -a -f StrengeMettlerKuengAufg1.sql
+  sql2:
+    cmds:
+      - psql -h localhost -U postgres  -a -f StrengeMettlerKuengAufg2.sql

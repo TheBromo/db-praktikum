@@ -29,7 +29,7 @@ CREATE TABLE Spieler (
 -- Trainer Table 
 CREATE TABLE Trainer (
     Lizenz VARCHAR(50) NOT NULL,
-    Lizenzjahr INT NOT NULL CHECK (Lizenzjahr >= 1000 AND Lizenzjahr <= 9999)
+    Lizenzjahr INT NOT NULL CHECK (Lizenzjahr >= 0 AND Lizenzjahr <= 9999)
 )      INHERITS(Sportler);
 
 -- Spiel Table
@@ -44,18 +44,18 @@ CREATE TABLE Spiel (
 CREATE TABLE Mannschaft (
     MID INT PRIMARY KEY,
     Name VARCHAR(50) NOT NULL,
-    Gruendungsjahr INT NOT NULL CHECK (Gruendungsjahr >= 1000 AND Gruendungsjahr <= 9999)
+    Gruendungsjahr INT NOT NULL CHECK (Gruendungsjahr >= 0 AND Gruendungsjahr <= 9999)
 );
 
 -- Transfers Table 
 CREATE TABLE Transfers (
     TID INT PRIMARY KEY,
     SID INT NOT NULL,
-    Von INT NOT NULL, --TODO muss vorkommen in Manschaftstabelle
-    Zu INT NOT NULL, --TODO muss vorkommen in Manschaftstabelle
+    Von INT NOT NULL,
+    Zu INT NOT NULL, 
     Transferdatum DATE NOT NULL,
     Abloese INT NOT NULL,
-    FOREIGN KEY (Von) REFERENCES Mannschaft(MID),-- ist das korrekt so keine Ahnung :(
+    FOREIGN KEY (Von) REFERENCES Mannschaft(MID),
     FOREIGN KEY (Zu) REFERENCES Mannschaft(MID),
     FOREIGN KEY (SID) REFERENCES Sportler(SID)
 );
@@ -65,10 +65,11 @@ CREATE TABLE Trainiert (
     SID INT NOT NULL,
     MID INT NOT NULL,
     Gehalt INT NOT NULL,
-    PRIMARY KEY (SID), -- changed
+    PRIMARY KEY (SID, MID),
     FOREIGN KEY (SID) REFERENCES Sportler(SID),
     FOREIGN KEY (MID) REFERENCES Mannschaft(MID)
 );
+
 
 -- Gehoertzu Table
 CREATE TABLE Gehoertzu (
@@ -171,7 +172,7 @@ VALUES (1, 1),
        (2, 2),
        (3, 3),
        (4, 4),
-       (5, 5);
+       (4, 5);
 
 -- ----------------------------------------------------------------------
 -- Queries
