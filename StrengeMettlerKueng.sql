@@ -104,7 +104,7 @@ VALUES (1,'Amber', 'Smith', '1966-04-26', 'Football', 'Quarterback', 1000000),
 
 -- Trainer Table
 INSERT INTO Trainer (SID, Vorname, Nachname, Geburtsdatum,Lizenz, Lizenzjahr) --changed
-VALUES (6,'Tamara', 'Wood', '1996-05-30', 'Football Coach', 2010),
+VALUES (1,'Amber', 'Smith', '1966-04-26', 'Football Coach', 2010),
        (7,'Erin', 'Jones', '1958-07-30', 'Basketball Coach', 2015),
        (8,'Tammy', 'Phillips', '1968-08-08', 'Soccer Coach', 2005),
        (9,'Robin', 'Jackson', '1996-06-07', 'Baseball Coach', 2008),
@@ -120,7 +120,6 @@ INSERT INTO Sportler (SID, Vorname, Nachname, Geburtsdatum) VALUES --changed
 
 -- Einfügen von Trainern in die Sportler-Tabelle
 INSERT INTO Sportler (SID, Vorname, Nachname, Geburtsdatum) VALUES --changed
-(6, 'Tamara', 'Wood', '1996-05-30'),
 (7, 'Erin', 'Jones', '1958-07-30'),
 (8, 'Tammy', 'Phillips', '1968-08-08'),
 (9, 'Robin', 'Jackson', '1996-06-07'),
@@ -152,8 +151,8 @@ VALUES (1, 1, 1, 2, '2017-01-01', 500000),
 
 -- Trainiert Table
 INSERT INTO Trainiert (SID, MID, Gehalt)
-VALUES (6, 1, 100000),
-       (7, 2, 90000),
+VALUES (1, 2, 100000),
+       (7, 3, 90000),
        (8, 3, 80000),
        (9, 4, 70000),
        (10, 5, 60000);
