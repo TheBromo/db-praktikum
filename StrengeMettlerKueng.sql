@@ -103,7 +103,7 @@ VALUES (1,'Amber', 'Smith', '1966-04-26', 'Football', 'Quarterback', 1000000),
        (5,'Teresa', 'Williams', '1968-05-06', 'Tennis', 'Singles', 300000);
 
 -- Trainer Table
-INSERT INTO Trainer (SID, Vorname, Nachname, Geburtsdatum,Lizenz, Lizenzjahr) --changed
+INSERT INTO Trainer (SID, Vorname, Nachname, Geburtsdatum,Lizenz, Lizenzjahr)
 VALUES (1,'Amber', 'Smith', '1966-04-26', 'Football Coach', 2010),
        (7,'Erin', 'Jones', '1958-07-30', 'Basketball Coach', 2015),
        (8,'Tammy', 'Phillips', '1968-08-08', 'Soccer Coach', 2005),
@@ -111,7 +111,7 @@ VALUES (1,'Amber', 'Smith', '1966-04-26', 'Football Coach', 2010),
        (10,'Craig', 'Thomas', '1973-07-05', 'Tennis Coach', 2012);
 
 -- Einfügen von Spielern in die Sportler-Tabelle
-INSERT INTO Sportler (SID, Vorname, Nachname, Geburtsdatum) VALUES --changed
+INSERT INTO Sportler (SID, Vorname, Nachname, Geburtsdatum) VALUES
 (1, 'Amber', 'Smith', '1966-04-26'),
 (2, 'Denise', 'Brennan', '1950-02-06'),
 (3, 'John', 'Parker', '1992-12-06'),
@@ -119,7 +119,7 @@ INSERT INTO Sportler (SID, Vorname, Nachname, Geburtsdatum) VALUES --changed
 (5, 'Teresa', 'Williams', '1968-05-06');
 
 -- Einfügen von Trainern in die Sportler-Tabelle
-INSERT INTO Sportler (SID, Vorname, Nachname, Geburtsdatum) VALUES --changed
+INSERT INTO Sportler (SID, Vorname, Nachname, Geburtsdatum) VALUES
 (7, 'Erin', 'Jones', '1958-07-30'),
 (8, 'Tammy', 'Phillips', '1968-08-08'),
 (9, 'Robin', 'Jackson', '1996-06-07'),
@@ -142,7 +142,7 @@ VALUES (1, 'Team A', 2000),
        (5, 'Team E', 2015);
 
 -- Transfers Table
-INSERT INTO Transfers (TID, SID, Von, Zu, Transferdatum, Abloese) --changed
+INSERT INTO Transfers (TID, SID, Von, Zu, Transferdatum, Abloese)
 VALUES (1, 1, 1, 2, '2017-01-01', 500000),
        (2, 1, 2, 1, '2017-01-01', 150000),
        (3, 3, 4, 3, '2017-01-01', 2000),
@@ -152,7 +152,7 @@ VALUES (1, 1, 1, 2, '2017-01-01', 500000),
 -- Trainiert Table
 INSERT INTO Trainiert (SID, MID, Gehalt)
 VALUES (1, 2, 100000),
-       (7, 3, 90000),
+       (7, 1, 90000),
        (8, 3, 80000),
        (9, 4, 70000),
        (10, 5, 60000);
