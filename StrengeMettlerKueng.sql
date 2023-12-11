@@ -201,11 +201,19 @@ WHERE NOT EXISTS (
 );
 
 -- Aufgabe 2.2
-SELECT SID, Vorname, Nachname AS Typ
-FROM Spieler
-UNION ALL
-SELECT SID, Vorname, Nachname AS Typ
-FROM Trainer;
+-- Kann sprachlich unterschiedlich interpretiert werden. Wir haben uns dafür entschieden, auszulesen,
+-- welche Sportler gleichzeitig sowohl Trainer als auch Spieler eines Teams (muss nicht dasselbe sein) sind,
+-- auch wenn das in der Realität sehr unwahrscheinlich ist.
+SELECT DISTINCT
+    Sp.SID,
+    Sp.Vorname,
+    Sp.Nachname
+FROM 
+    Sportler Sp
+INNER JOIN 
+    Spieler S ON Sp.SID = S.SID
+INNER JOIN 
+    Trainer T ON Sp.SID = T.SID;
 
 -- Aufgabe 2.3
 SELECT 
