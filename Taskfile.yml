@@ -8,4 +8,4 @@ vars:
 tasks:
   script:
     cmds:
-      - psql -h localhost -U postgres  -a -f nachname.sql
+      - psql -h localhost -U postgres  -a -f StrengeMettlerKueng.sql
