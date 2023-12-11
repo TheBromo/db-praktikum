@@ -9,5 +9,10 @@ Command to execute the script from within a terminal:
 ```bash
 psql -h localhost -U postgres -d postgres -a -f nachname.sql
 ```
+or if you have tasks isntalled
+
+```bash
+task script
+```
 
 
