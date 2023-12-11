@@ -65,7 +65,7 @@ CREATE TABLE Trainiert (
     SID INT NOT NULL,
     MID INT NOT NULL,
     Gehalt INT NOT NULL,
-    PRIMARY KEY (SID, MID),
+    PRIMARY KEY (SID),
     FOREIGN KEY (SID) REFERENCES Sportler(SID),
     FOREIGN KEY (MID) REFERENCES Mannschaft(MID)
 );
@@ -91,9 +91,6 @@ CREATE TABLE Spielt (
 
 -- ----------------------------------------------------------------------
 -- Testdaten 
--- ----------------------------------------------------------------------
--- ----------------------------------------------------------------------
--- Manuel Strenge, Micha Mettler, Pascal Küng
 -- ----------------------------------------------------------------------
 
 -- Sportler Table
@@ -181,3 +178,5 @@ SELECT * FROM Transfers;
 SELECT * FROM Trainiert;
 SELECT * FROM Gehoertzu;
 SELECT * FROM Spielt;
+
+
